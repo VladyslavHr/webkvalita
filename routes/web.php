@@ -13,13 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('lang/{locale}', function ($locale) {
-//     if (in_array($locale, ['en', 'sk'])) {
-//         session(['locale' => $locale]);
-//     }
-//     return back();
-// });
-
 Route::get('lang/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'sk'])) {
         session(['locale' => $locale]);
@@ -29,11 +22,19 @@ Route::get('lang/{locale}', function ($locale) {
     return back();
 });
 
-Auth::routes();
-
 Route::group(['prefix' => '{locale}'], function() {
+    Auth::routes();
+
     // Ваши обычные маршруты
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 
     // другие маршруты...
+    // Группа маршрутов для администратора
+    Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
+
+        // Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard.index');
+    });
+
 });
+
+

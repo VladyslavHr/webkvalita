@@ -1,29 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+
+@include('blocks.main-back')
 <div class="container">
-    <div class="language-switcher">
-        <a href="{{ str_replace('/' . app()->getLocale(), '/en', url()->current()) }}" class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">English</a> |
-        <a href="{{ str_replace('/' . app()->getLocale(), '/sk', url()->current()) }}" class="{{ app()->getLocale() == 'sk' ? 'active' : '' }}">SK</a>
-    </div>
+    <h2 class="text-center pt-3">Prečo si nás vybrať</h2>
+    <h5 class="text-center pt-3">Rýchlo! Lacno! Kvalitne!</h5>
+    <div class="row py-3">
+        <div class="col-lg-4">
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-                <div class="">
-                    {{__('header.welcome')}}
-                </div>
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        </div>
+        <div class="col-lg-4">
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+        </div>
+        <div class="col-lg-4">
+
         </div>
     </div>
 </div>

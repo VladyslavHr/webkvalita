@@ -1,0 +1,106 @@
+.border-top-head{
+    border-bottom: 1px solid;
+}
+
+.backgoud-wrap-header{
+    background-color: #1d1d1d;
+}
+
+.header-menu .nav-link{
+    color: #fff;
+}
+
+.header-menu .nav-link.active{
+    color: antiquewhite;
+}
+
+.info-mid-header-call,
+.info-mid-header-open{
+    font-size: 14px;
+}
+
+.info-top-header{
+    font-size: 14px;
+}
+@media (max-width: 991px){
+
+    .info-mid-header{
+        display: none;
+    }
+
+}
+
+@media (min-width: 992px) { /* Адаптируйте минимальную ширину в соответствии с вашими нуждами */
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  }
+
+
+
+
+
+
+
+  /* Carousel-Main */
+.span-red{
+    font-weight: 900;
+}
+
+.carousel-item {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    object-fit: cover; /* Это обеспечивает поддержание пропорций изображения */
+}
+
+.img-conteiner{
+        display: flex;
+        align-items: center; /* Центрирование по вертикали */
+        justify-content: center; /* Центрирование по горизонтали, если нужно */
+        height: 500px; /* Высота контейнера */
+}
+
+.img-conteiner img{
+    filter: brightness(0.5);
+
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.carousel-item {
+    animation: fadeIn 2s;
+}
+
+.carousel-caption {
+    opacity: 0;
+    animation: fadeIn 2s 2s forwards; /* Анимация для текста */
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 11.25rem!important;
+    padding-bottom: 17.25rem!important;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 993px){
+
+    .carousel-caption{
+        padding-top: 7.25rem!important;
+        padding-bottom: 20.25rem!important;
+    }
+}
+
+.item img{
+    border-radius: var(--bs-border-radius);
+}
+
+/* Carousel main */
