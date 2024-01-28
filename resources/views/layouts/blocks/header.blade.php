@@ -119,6 +119,9 @@
                             <a class="nav-link" href="#">{{__('header.Tips and tricks')}}</a>
                         </li>
                         <li class="nav-item flex-grow-1 text-center">
+                            <a class="nav-link" href="#">{{__('header.Our work')}}</a>
+                        </li>
+                        <li class="nav-item flex-grow-1 text-center">
                             <a class="nav-link" href="#">{{__('header.Contact')}}</a>
                         </li>
                     </ul>

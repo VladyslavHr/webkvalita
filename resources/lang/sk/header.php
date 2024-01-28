@@ -11,5 +11,6 @@ return [
     'Laptop repair' => 'Oprava notebookov',
     'Computer repair' => 'Oprava počítačov',
     'Tips and tricks' => 'Tipy a triky',
+    'Our work' => 'Naša práca',
     'Contact' => 'Kontakt',
 ];

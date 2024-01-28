@@ -11,6 +11,7 @@ return [
     'Laptop repair' => 'Laptop repair',
     'Computer repair' => 'Computer repair',
     'Tips and tricks' => 'Tips and tricks',
+    'Our work' => 'Our work',
     'Contact' => 'Contact',
 
 ];
