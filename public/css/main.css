@@ -158,3 +158,67 @@
     padding: 30px 140px 30px 0;
     font-size: 18px;
 }
+
+.home-services-text{
+    padding: 10px 25% 50px 25%;
+}
+
+.home-background-result{
+    background-color: #009cff;
+    background-image: url('/home/pattern3.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.home-result-logo{
+    font-size: 35px;
+    color: #fff;
+}
+
+.home-result-num{
+    color: #fff;
+    font-size: 40px;
+}
+
+.home-result-text{
+    font-size: 18px;
+    color: #fff;
+}
+
+.home-background-comments{
+    background-image: url('/home/bg-01.jpg');
+
+}
+
+.home-comments-title{
+    color: #fff;
+}
+
+.home-comments-text{
+    color: #fff;
+}
+
+.home-carousel-comment-text{
+    color: #fff;
+    padding: 25px 45px;
+}
+
+.carousel-link-prev{
+    left: -40px;
+}
+
+.carousel-link-next{
+    right: -30px;
+}
+
+.home-carousel-customer{
+    padding: 0 45px;
+}
+
+.home-carousel-customer-img img{
+    border-radius: 50%;
+}
+
+.home-carousel-customer-info{
+    color: #fff;
+}
