@@ -195,7 +195,7 @@
                         <div class="home-carousel-comment-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, aspernatur illo quaerat perferendis, quo velit ex eius enim modi officia dolorem adipisci provident. Ducimus nesciunt sit cumque quibusdam hic voluptas.
                         </div>
-                        <div class="home-carousel-customer row">
+                        <div class="home-carousel-customer pb-5 row">
                             <div class="home-carousel-customer-img col-lg-2">
                                 <img class="image" src="{{asset('customers/customer1.jpg')}}" alt="">
                             </div>
@@ -213,7 +213,7 @@
                         <div class="home-carousel-comment-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, aspernatur illo quaerat perferendis, quo velit ex eius enim modi officia dolorem adipisci provident. Ducimus nesciunt sit cumque quibusdam hic voluptas.
                         </div>
-                        <div class="home-carousel-customer row">
+                        <div class="home-carousel-customer pb-5 row">
                             <div class="home-carousel-customer-img col-lg-2">
                                 <img class="image" src="{{asset('customers/customer2.jpg')}}" alt="">
                             </div>
@@ -231,7 +231,7 @@
                         <div class="home-carousel-comment-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, aspernatur illo quaerat perferendis, quo velit ex eius enim modi officia dolorem adipisci provident. Ducimus nesciunt sit cumque quibusdam hic voluptas.
                         </div>
-                        <div class="home-carousel-customer row">
+                        <div class="home-carousel-customer pb-5 row">
                             <div class="home-carousel-customer-img col-lg-2">
                                 <img class="image" src="{{asset('customers/customer3.jpg')}}" alt="">
                             </div>
@@ -261,43 +261,52 @@
 </div>
 
 <div class="container">
-    <div class="gallery-section pt-3">
+    <div class="gallery-section pt-5">
         <h2 class="text-center">Naši partneři</h2>
-        <div class="owl-carousel custom-carousel owl-theme">
-        <div class="item-partners-logo active" style="background-image: url('https://source.unsplash.com/300x300/?perth,australia');">
-            <div class="item-desc">
-            {{-- <h3>Coca-cola</h3> --}}
-            {{-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo soluta voluptas accusantium in officiis quia ad voluptatem, deleniti quaerat, praesentium temporibus animi ab explicabo saepe? Quis atque obcaecati quasi quo?</p> --}}
-            </div>
-        </div>
-        <div class="item-partners-logo" style="background-image: url('https://source.unsplash.com/300x300/?fremantle,australia');">
-            <div class="item-desc">
-            {{-- <h3>Orlická lodní doprava</h3> --}}
-            {{-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos minima vel rerum natus nulla necessitatibus itaque tempore tempora! Porro perferendis temporibus optio iure rem repellendus autem eum debitis similique eaque.</p> --}}
-            </div>
-        </div>
-        <div class="item-partners-logo" style="background-image: url('https://source.unsplash.com/300x300/?west-australia');">
-            <div class="item-desc">
-            {{-- <h3>Platan</h3> --}}
-            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsam pariatur cum quis necessitatibus ipsum officia quae, eaque, dolores illo nobis placeat in nam maiores ab a praesentium modi eos!</p> --}}
-            </div>
-        </div>
-        <div class="item-partners-logo" style="background-image: url('https://source.unsplash.com/300x300/?perth');">
-            <div class="item-desc">
-            {{-- <h3>Zavolejsikurýra</h3> --}}
-            {{-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, ex obcaecati? Unde, quidem non. Quam laborum labore maxime quis. Quo optio id recusandae eum mollitia rem ducimus aspernatur blanditiis. Adipisci!</p> --}}
-            </div>
-        </div>
-        <div class="item-partners-logo" style="background-image: url('https://source.unsplash.com/300x300/?margaretriver,australia');">
-            <div class="item-desc">
-            {{-- <h3>Top Cars Lease</h3> --}}
-            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum distinctio corporis suscipit quia aspernatur odit provident tempora. Dicta suscipit ab consectetur aperiam, impedit eos delectus sapiente facere cupiditate consequuntur itaque?</p> --}}
-            </div>
-        </div>
-        </div>
+        <div class="owl-carousel py-5">
+            <div class="item"><img src="{{ asset('partners/client-01.jpg') }}" alt="Image 1"></div>
+            <div class="item"><img src="{{ asset('partners/client-02.jpg') }}" alt="Image 2"></div>
+            <div class="item"><img src="{{ asset('partners/client-03.jpg') }}" alt="Image 3"></div>
+            <div class="item"><img src="{{ asset('partners/client-04.jpg') }}" alt="Image 4"></div>
+            <div class="item"><img src="{{ asset('partners/client-05.jpg') }}" alt="Image 5"></div>
+            <div class="item"><img src="{{ asset('partners/client-06.jpg') }}" alt="Image 6"></div>
+            <div class="item"><img src="{{ asset('partners/client-07.jpg') }}" alt="Image 7"></div>
+            <div class="item"><img src="{{ asset('partners/client-08.jpg') }}" alt="Image 8"></div>
+            <div class="item"><img src="{{ asset('partners/client-09.jpg') }}" alt="Image 9"></div>
+            <div class="item"><img src="{{ asset('partners/client-10.jpg') }}" alt="Image10"></div>
         </div>
     </div>
 </div>
+
+<div class="home-background-contact-form py-5">
+    <div class="container">
+        <form class="row">
+            <div class="col-lg-6">
+                <div class="home-contact-form-text-wrap">
+                    <div class="text-center py-2 home-contact-form-title-text">Garancia spokojnosti</div>
+                    <div class="text-center py-2 home-contact-form-subtitle-text">Rýchlo, Lacno, Kvalitne</div>
+                    <p class="py-3 home-contact-form-text">
+                        Opravy vykonávame najmodernejšími technológiami a používame najmodernejšie postupy. Naši technici sú vyškolení a majú bohaté skúsenosti s opravou notebookov a počítačov. Spolupracujeme s výrobcami náhradných dielov a preto Vám vždy poskytneme najlepšiu cenu.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="home-contact-form-wrap">
+                    <div class="home-contact-form-block">
+                        <div class="home-contact-form-title mb-3">
+                            <h4 class="text-center">Opýtajte sa na cenu</h4>
+                        </div>
+                        <input type="text" name="" class="form-control mb-3" placeholder="Vaše meno">
+                        <input type="text" name="" class="form-control mb-3" placeholder="Váš e-mail">
+                        <textarea name="" id="" cols="30" rows="10" class="form-control mb-3" placeholder="Popíšte svoj problém"></textarea>
+                        <button class="btn btn-primary" type="submit">Poslať požiadavku</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 @endsection
 

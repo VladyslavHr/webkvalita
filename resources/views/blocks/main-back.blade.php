@@ -2,7 +2,7 @@
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item active" data-bs-interval="100000000">
             <div class="img-conteiner">
                 <img src="{{ asset('carousel-images/banner1.png') }}" class="d-block w-100" alt="...">
             </div>

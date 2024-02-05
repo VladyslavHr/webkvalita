@@ -21,40 +21,29 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       });
     });
-  });
+});
 
-document.addEventListener("DOMContentLoaded", function() {
-    var multiItemCarousel = document.querySelectorAll('.multi-item-carousel');
-
-    multiItemCarousel.forEach(function(carousel) {
-        // Инициализация карусели
-        var bsCarousel = new bootstrap.Carousel(carousel, {
-            interval: false
-        });
-
-        var items = carousel.querySelectorAll('.item');
-
-        // Для каждого слайда в карусели
-        items.forEach(function(item) {
-            var nextItem = item.nextElementSibling;
-            if (!nextItem) {
-                nextItem = carousel.querySelector('.item:first-child');
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        loop:true, // Бесконечное зацикливание слайдера
+        margin:50, // Отступ между элементами в пикселях
+        nav:false, // Навигация (стрелки вперед-назад)
+        autoplay:true, // Автоматическая прокрутка слайдера
+        autoplayTimeout:2500, // Время в миллисекундах до автоматического переключения слайдов
+        autoplaySpeed: 2000,
+        autoplayHoverPause:true, // Остановка автопрокрутки при наведении курсора
+        lazyLoad:true, // Включает ленивую загрузку изображений
+        responsive:{
+            0:{
+                items:1 // Количество слайдов для отображения на маленьких экранах
+            },
+            600:{
+                items:3 // Количество слайдов для отображения на средних экранах
+            },
+            1000:{
+                items:5 // Количество слайдов для отображения на больших экранах
             }
-
-            // Клонируем первый дочерний элемент следующего слайда
-            var clonedChild = nextItem.querySelector(':first-child').cloneNode(true);
-            item.appendChild(clonedChild);
-
-            // Проверяем следующий за следующим слайд
-            var nextNextItem = nextItem.nextElementSibling;
-            if (!nextNextItem) {
-                nextNextItem = carousel.querySelector('.item:first-child');
-            }
-
-            // Клонируем первый дочерний элемент следующего за следующим слайда
-            var clonedNextChild = nextNextItem.querySelector(':first-child').cloneNode(true);
-            item.appendChild(clonedNextChild);
-        });
+        }
     });
 });
 
