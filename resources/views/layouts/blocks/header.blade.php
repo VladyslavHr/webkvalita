@@ -87,7 +87,10 @@
                 </div>
               </nav> --}}
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand-small-creen" href="#">
+                    <img class="image" src="{{ asset('logo/logo.png') }}" alt="">
+                </a>
+                <button class="navbar-toggler button-colapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -96,7 +99,7 @@
                             <a class="nav-link active" href="#">{{__('header.Current actions')}}</a>
                         </li>
                         <li class="nav-item flex-grow-1 text-center">
-                            <a class="nav-link" href="#">{{__('header.About company')}}</a>
+                            <a class="nav-link" href="{{ locale_route('firm.index',) }}">{{__('header.About company')}}</a>
                         </li>
                         <li class="nav-item dropdown flex-grow-1 text-center">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

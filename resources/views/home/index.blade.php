@@ -263,7 +263,7 @@
 <div class="container">
     <div class="gallery-section pt-5">
         <h2 class="text-center">Naši partneři</h2>
-        <div class="owl-carousel py-5">
+        <div class="owl-home owl-carousel owl-theme py-5">
             <div class="item"><img src="{{ asset('partners/client-01.jpg') }}" alt="Image 1"></div>
             <div class="item"><img src="{{ asset('partners/client-02.jpg') }}" alt="Image 2"></div>
             <div class="item"><img src="{{ asset('partners/client-03.jpg') }}" alt="Image 3"></div>

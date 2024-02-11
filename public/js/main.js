@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
+    $(".owl-home").owlCarousel({
         loop:true, // Бесконечное зацикливание слайдера
         margin:50, // Отступ между элементами в пикселях
         nav:false, // Навигация (стрелки вперед-назад)
@@ -45,5 +45,52 @@ $(document).ready(function(){
             }
         }
     });
-});
+    $(".owl-firm").owlCarousel({
+        loop:true, // Бесконечное зацикливание слайдера
+        margin:50, // Отступ между элементами в пикселях
+        nav:false, // Навигация (стрелки вперед-назад)
+        autoplay:true, // Автоматическая прокрутка слайдера
+        autoplayTimeout:2500, // Время в миллисекундах до автоматического переключения слайдов
+        autoplaySpeed: 2000,
+        autoplayHoverPause:true, // Остановка автопрокрутки при наведении курсора
+        lazyLoad:true, // Включает ленивую загрузку изображений
+        responsive:{
+            0:{
+                items:1 // Количество слайдов для отображения на маленьких экранах
+            },
+            600:{
+                items:1 // Количество слайдов для отображения на средних экранах
+            },
+            1000:{
+                items:1 // Количество слайдов для отображения на больших экранах
+            }
+        }
+    });
 
+
+
+    // Функция проверки видимости элемента в области видимости
+    function checkVisibility(element) {
+        var windowHeight = $(window).height(),
+            scrollTop = $(window).scrollTop(),
+            elementOffset = $(element).offset().top,
+            elementHeight = $(element).height();
+
+        // Проверяем, находится ли элемент в области видимости
+        if (elementOffset + elementHeight >= scrollTop && elementOffset <= scrollTop + windowHeight) {
+            $(element).addClass('fadeInUp');
+        }
+        }
+
+        // Проверяем каждый элемент при прокрутке
+        $(window).scroll(function() {
+        $('.timeline-item').each(function() {
+            checkVisibility(this);
+        });
+        });
+
+        // Проверяем один раз при загрузке страницы
+        $('.timeline-item').each(function() {
+        checkVisibility(this);
+        });
+});

@@ -31,6 +31,15 @@
 .image{
     width: 100%;
 }
+
+.button-colapsed{
+    background-color: #fff!important;
+}
+
+.navbar-brand-small-creen{
+    display: none;
+}
+
 @media (max-width: 991px){
 
     .info-mid-header{
@@ -273,37 +282,195 @@
 }
 
 .footer-copirite{
-    color: #fff;
+    color: #bababa;
 }
 
 .footer-firm-text{
-    color: #fff;
+    color: #bababa;
+}
+
+.footer-title{
+    color: #bababa;
+}
+
+.footer-ul-list{
+    color: #bababa;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list-link{
+    color: #bababa;
+    text-decoration: none;
+}
+
+.footer-li-list{
+    border-top: 1px solid #bababa;
+    padding-bottom: 7px;
+}
+
+.footer-li-list:first-child{
+    border-top: 0px solid #bababa;
+    padding-bottom: 7px;
+}
+
+.footer-li-list:last-child{
+    border-bottom: 1px solid #bababa;
+}
+
+/* Firm */
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #c5c5c5;
+    margin-left: -1px;
+}
+
+.timeline-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-row::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #009cff;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    width: 300px;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    margin: 0 10px;
+}
+
+.timeline-item::before {
+    display: none;
+}
+
+.firm-expiarence-titile{
+    font-size: 17px;
+    color: #278db1;
+    padding-bottom: 7px;
+}
+
+/* .list-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .list-group-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media (min-width: 992px) {
+    .list-group-item {
+        flex: 0 0 calc(33.333% - 10px);
+    }
+} */
+
+
+.list-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.list-group-item {
+    flex: 1 1 auto;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+    transform: translateY(-5px); /* Поднимает элемент при наведении */
+    background-color: #e2e6ea; /* Слегка затемняет фон при наведении */
+}
+
+
+.review {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+    height: auto;
+}
+
+.review p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.review strong {
+    color: #007bff;
 }
 
 
 
 
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+    }
 
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
 
 
 @media (max-width: 993px){
@@ -337,6 +504,28 @@
     .carousel-caption{
         padding-bottom: 14.25rem!important;
     }
+
+    .timeline-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .timeline-item {
+        width: 80%; /* Или другой процент/фиксированная ширина, подходящая для вашего дизайна */
+        /* Убедитесь, что элементы временной шкалы теперь будут занимать больше горизонтального пространства */
+        margin: 10px 0; /* Добавьте немного вертикального пространства между элементами */
+      }
+
+      .timeline-item.left::before,
+      .timeline-item.right::before {
+        display: none; /* Убираем псевдоэлементы, если они были добавлены */
+      }
+
+      .timeline-row::before {
+        /* Центрируем точку в начале каждого элемента временной шкалы */
+        top: 0;
+        transform: translate(-50%, 0);
+      }
 }
 
 @media (max-width: 767px){
@@ -356,6 +545,11 @@
 }
 
 @media (max-width: 576px){
+
+    .navbar-brand-small-creen{
+        display: block;
+        width: 80%;
+    }
 
     .img-conteiner{
         height: 213px;
@@ -379,6 +573,11 @@
 }
 
 @media (max-width: 376px){
+
+    .navbar-brand-small-creen{
+        display: block;
+        width: 77%;
+    }
 
     .home-carousel-customer{
         margin: 30px 70px 30px;

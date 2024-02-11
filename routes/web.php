@@ -25,8 +25,11 @@ Route::get('lang/{locale}', function ($locale) {
 Route::group(['prefix' => '{locale}'], function() {
     Auth::routes();
 
-    // Ваши обычные маршруты
+    // Home
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+
+    // Firm
+    Route::get('/o-firme', [App\Http\Controllers\FirmController::class, 'index'])->name('firm.index');
 
     // другие маршруты...
     // Группа маршрутов для администратора
