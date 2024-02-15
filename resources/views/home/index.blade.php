@@ -6,38 +6,7 @@
 <div class="container">
     <h2 class="text-center pt-3">{{ __('home.Why choose us') }}</h2>
     <h5 class="text-center pt-3 pb-5">{{ __('home.Quick! Cheap! Quality!') }}</h5>
-    <div class="row py-5">
-        <div class="col-lg-4 pb-5">
-            <div class="home-icon-wrap text-center">
-                <i class="fs-1 bi bi-cash-stack"></i>
-                <div class="home-icon-text">
-                    <h4>Diagn</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur optio ipsam impedit repellendus recusandae. Voluptate reiciendis sit optio molestias ipsum possimus consequuntur neque quae, voluptas accusamus minus, eaque qui.
-                </div>
-                <a href="#" class="btn btn-primary my-5">Cklick</a>
-            </div>
-        </div>
-        <div class="col-lg-4 pb-5">
-            <div class="home-icon-wrap text-center">
-                <i class="fs-1 bi bi-wrench"></i>
-                <div class="home-icon-text">
-                    <h4>Diagn</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur optio ipsam impedit repellendus recusandae. Voluptate reiciendis sit optio molestias ipsum possimus consequuntur neque quae, voluptas accusamus minus, eaque qui.
-                </div>
-                <a href="#" class="btn btn-primary my-5">Cklick</a>
-            </div>
-        </div>
-        <div class="col-lg-4 pb-5">
-            <div class="home-icon-wrap text-center">
-                <i class="fs-1 bi bi-calendar-date-fill"></i>
-                <div class="home-icon-text">
-                    <h4>Diagn</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur optio ipsam impedit repellendus recusandae. Voluptate reiciendis sit optio molestias ipsum possimus consequuntur neque quae, voluptas accusamus minus, eaque qui.
-                </div>
-                <a href="#" class="btn btn-primary my-5">Cklick</a>
-            </div>
-        </div>
-    </div>
+    @include('blocks/main-icon')
 
     <div class="row py-5 align-items-center">
         <div class="col-lg-6">

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row py-5">
             <div class="col-md-3">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ locale_route('home.index',) }}">
                     <img class="pb-3" src="{{ asset('logo/logo.png') }}" style="width: 100%" alt="">
                 </a>
                 <p class="footer-firm-text">
@@ -84,7 +84,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="d-flex justify-content-end">
-                    <a href="" class="">Aktuálne akcie</a>
+                    <a href="{{ locale_route('home.index',) }}" class="">Aktuálne akcie</a>
                     <span class="me-3 ms-3">/</span>
                     <a href="{{ locale_route('firm.index',) }}" class="">O firme</a>
                     <span class="me-3 ms-3">/</span>

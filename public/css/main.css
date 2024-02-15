@@ -40,6 +40,10 @@
     display: none;
 }
 
+.sub-color-text{
+    color: #278db1;
+}
+
 @media (max-width: 991px){
 
     .info-mid-header{
@@ -451,7 +455,127 @@
     color: #007bff;
 }
 
+/* Note Repair */
+.note-icon-box {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    text-align: center;
+}
 
+.note-icon-box i {
+    font-size: 24px; /* Измените размер иконок по вашему усмотрению */
+    margin-bottom: 15px;
+}
+
+.note-icon-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.note-icon-box p {
+    font-size: 14px;
+}
+
+.note-service i {
+    font-size: 20px; /* Размер иконок */
+    width: 30px; /* Ширина области для иконки для выравнивания */
+}
+
+
+/* Добавьте дополнительные стили для адаптации под ваш дизайн */
+
+
+.note-brands-list {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем поля */
+}
+
+.note-brands-list li {
+    padding: 10px; /* Добавляем немного отступа для каждого элемента */
+    border-bottom: 1px solid #ccc; /* Граница между элементами списка */
+    transition: background-color 0.3s; /* Анимация фона при наведении */
+    cursor: pointer;
+}
+
+.note-brands-list li:last-child {
+    border-bottom: none; /* Убираем границу у последнего элемента */
+}
+
+.note-brands-list li:hover {
+    background-color: #f0f0f0; /* Цвет фона при наведении */
+}
+
+
+.notes-problems-list ul,
+.notes-services-list ul {
+    position: relative;
+  }
+  .notes-problems-list ul li {
+    position: relative;
+    left: 0;
+    color: black;
+    list-style: none;
+    margin: 4px 0;
+    border-left: 2px solid #278db1;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .notes-services-list ul li {
+    position: relative;
+    left: 0;
+    color: black;
+    list-style: none;
+    margin: 4px 0;
+    border-left: 2px solid #009cff;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .notes-problems-list ul li:hover,
+  .notes-services-list ul li:hover {
+    left: 10px;
+  }
+  .notes-problems-list ul li span,
+  .notes-services-list ul li span{
+    position: relative;
+    padding: 8px;
+    padding-left: 12px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .notes-problems-list ul li:hover span,
+  .notes-services-list ul li:hover span {
+    color: #fff;
+  }
+  .notes-problems-list ul li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #278db1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+  }
+  .notes-services-list ul li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #009cff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+  }
+  .notes-problems-list ul li:hover:before,
+  .notes-services-list ul li:hover:before {
+    transform: scaleX(1);
+  }
 
 
 @keyframes fadeInUp {
@@ -474,6 +598,10 @@
 
 
 @media (max-width: 993px){
+    .navbar-brand-small-creen{
+        display: block;
+        width: 50%;
+    }
 
     .home-carousel-comment-text{
         padding: 10px 0px;
@@ -548,7 +676,7 @@
 
     .navbar-brand-small-creen{
         display: block;
-        width: 80%;
+        width: 60%;
     }
 
     .img-conteiner{

@@ -38,7 +38,7 @@
 <div class="container py-5 info-mid-header">
     <div class="row align-items-center">
         <div class="col-lg-3">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ locale_route('home.index',) }}">
                 <img src="{{ asset('logo/logo.png') }}" style="width: 100%" alt="">
             </a>
         </div>
@@ -87,7 +87,7 @@
                 </div>
               </nav> --}}
             <div class="container-fluid">
-                <a class="navbar-brand-small-creen" href="#">
+                <a class="navbar-brand-small-creen" href="{{ locale_route('home.index',) }}">
                     <img class="image" src="{{ asset('logo/logo.png') }}" alt="">
                 </a>
                 <button class="navbar-toggler button-colapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,7 +96,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex w-100">
                         <li class="nav-item flex-grow-1 text-center">
-                            <a class="nav-link active" href="#">{{__('header.Current actions')}}</a>
+                            <a class="nav-link active" href="{{ locale_route('home.index',) }}">{{__('header.Current actions')}}</a>
                         </li>
                         <li class="nav-item flex-grow-1 text-center">
                             <a class="nav-link" href="{{ locale_route('firm.index',) }}">{{__('header.About company')}}</a>
@@ -106,17 +106,17 @@
                               {{ __('header.Laptop repair') }}
                             </a>
                             <ul class="dropdown-menu flex-grow-1 " aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="{{ locale_route('noteRepair.index',) }}">{{ __('header.Laptop repair') }}</a></li>
                               <li><a class="dropdown-item" href="#">Another action</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
-                          </li>
+                        </li>
                         {{-- <li class="nav-item flex-grow-1 text-center">
                             <a class="nav-link" href="#">{{__('header.Laptop repair')}}</a>
                         </li> --}}
                         <li class="nav-item flex-grow-1 text-center">
-                            <a class="nav-link" href="#">{{__('header.Computer repair')}}</a>
+                            <a class="nav-link" href="{{ locale_route('compRepair.index',) }}">{{__('header.Computer repair')}}</a>
                         </li>
                         <li class="nav-item flex-grow-1 text-center">
                             <a class="nav-link" href="#">{{__('header.Tips and tricks')}}</a>
@@ -125,7 +125,7 @@
                             <a class="nav-link" href="#">{{__('header.Our work')}}</a>
                         </li>
                         <li class="nav-item flex-grow-1 text-center">
-                            <a class="nav-link" href="#">{{__('header.Contact')}}</a>
+                            <a class="nav-link" href="{{ locale_route('contact.index',) }}">{{__('header.Contact')}}</a>
                         </li>
                     </ul>
                 </div>

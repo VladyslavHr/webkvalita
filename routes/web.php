@@ -31,7 +31,15 @@ Route::group(['prefix' => '{locale}'], function() {
     // Firm
     Route::get('/o-firme', [App\Http\Controllers\FirmController::class, 'index'])->name('firm.index');
 
-    // другие маршруты...
+    // Firm
+    Route::get('/oprava-notebookov-kosice', [App\Http\Controllers\NoteRepairController::class, 'index'])->name('noteRepair.index');
+
+    // Firm
+    Route::get('/oprava-pocitacov-kosice', [App\Http\Controllers\CompRepairController::class, 'index'])->name('compRepair.index');
+
+    // Contact
+    Route::get('/kontakt', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
+
     // Группа маршрутов для администратора
     Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
 
