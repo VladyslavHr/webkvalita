@@ -67,7 +67,7 @@
                 </div>
             </div>
             <a href="#" class="btn btn-primary">Pozrite si priebeh opravy</a>
-            <div class="notes-services-list py-3">
+            <div class="notes-services-list py-5">
                 <h3 class="py-3 text-center" >Najčastejšie poruchy notebookov, ktoré opravujeme</h3>
                 <ul>
                     <li><span>diagnostika poruchy počítača, oprava alebo výmena chybných alebo poškodených komponentov, oprava akéhokoľvek problému s počitačom</span></li>

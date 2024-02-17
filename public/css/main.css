@@ -1,3 +1,8 @@
+#map {
+    height: 400px;
+    width: 100%;
+}
+
 .border-top-head{
     border-bottom: 1px solid;
 }
@@ -44,6 +49,68 @@
     color: #278db1;
 }
 
+/* Trick&Tips */
+.trick-problem-list {
+    margin: 20px;
+}
+
+.trick-problem-item {
+    background: #f9f9f9;
+    border-left: 5px solid #007bff;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.trick-problem-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    position: absolute;
+    left: -35px;
+    top: 10px;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
+
+.trick-problem-item p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.battery-tips {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+}
+
+.tip-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+}
+
+.tip-card h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.tip-card p {
+    color: #333;
+    line-height: 1.5;
+}
+
 @media (max-width: 991px){
 
     .info-mid-header{
@@ -52,7 +119,7 @@
 
 }
 
-@media (min-width: 992px) { /* Адаптируйте минимальную ширину в соответствии с вашими нуждами */
+@media (min-width: 992px) {
     .navbar .dropdown:hover .dropdown-menu {
       display: block;
     }
@@ -577,7 +644,156 @@
     transform: scaleX(1);
   }
 
+  /* Contact */
+.contact-opening-hours {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
+.contact-day-time h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.contact-time-slot {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Добавляет небольшой отступ между элементами */
+}
+
+.contact-day {
+    font-weight: bold;
+    color: #333;
+    margin-right: 5px;
+}
+
+.contact-hours {
+    background-color: #e7e7e7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.contact-morning {
+    border: 1px solid #007bff;
+}
+
+.contact-evening {
+    border: 1px solid #d9534f;
+}
+
+.contact-info {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+    color: #007bff;
+}
+
+.contact-info p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.contact-info .address, .contact-info .transport {
+    margin-bottom: 20px;
+}
+
+.contact-info .transport i {
+    color: #007bff;
+    margin-right: 5px;
+}
+
+
+/* Work */
+.snake-timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+}
+
+.step {
+    position: relative;
+    margin: 20px 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.step::before, .step::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #007bff;
+    left: 50%;
+    z-index: -1;
+}
+
+.step::before {
+    top: 0;
+    bottom: 50%;
+}
+
+.step::after {
+    top: 50%;
+    bottom: 0;
+}
+
+/* Первый элемент без верхней линии */
+.step:first-child::before {
+    content: none;
+}
+
+/* Последний элемент без нижней линии */
+.step:last-child::after {
+    content: none;
+}
+
+/* Для непарных шагов */
+.step:nth-child(odd) {
+    align-self: flex-start;
+    padding-left: 30px;
+}
+
+.step:nth-child(odd)::before, .step:nth-child(odd)::after {
+    left: 10px;
+}
+
+/* Для парных шагов */
+.step:nth-child(even) {
+    align-self: flex-end;
+    padding-right: 30px;
+}
+
+.step:nth-child(even)::before, .step:nth-child(even)::after {
+    left: calc(100% - 10px);
+}
+
+.image-block {
+    margin-bottom: 20px; /* Добавляет отступы между блоками */
+    border: 1px solid #ddd; /* Создаёт тонкую рамку вокруг блока */
+    border-radius: 5px; /* Скругляет углы рамки */
+    overflow: hidden; /* Обрезает содержимое блока по границам */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Добавляет тень для блока */
+    transition: box-shadow 0.3s ease; /* Анимация для тени */
+}
+
+.image-block:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Изменяет тень при наведении */
+}
+
+.image-work {
+    display: block; /* Убирает отступы вокруг изображения */
+    width: 100%; /* Заставляет изображение заполнять весь блок */
+    height: auto; /* Сохраняет пропорции изображения */
+}
 @keyframes fadeInUp {
     from {
       opacity: 0;

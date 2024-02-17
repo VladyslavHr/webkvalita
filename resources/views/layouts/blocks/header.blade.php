@@ -119,10 +119,10 @@
                             <a class="nav-link" href="{{ locale_route('compRepair.index',) }}">{{__('header.Computer repair')}}</a>
                         </li>
                         <li class="nav-item flex-grow-1 text-center">
-                            <a class="nav-link" href="#">{{__('header.Tips and tricks')}}</a>
+                            <a class="nav-link" href="{{ locale_route('tricks.index',) }}">{{__('header.Tips and tricks')}}</a>
                         </li>
                         <li class="nav-item flex-grow-1 text-center">
-                            <a class="nav-link" href="#">{{__('header.Our work')}}</a>
+                            <a class="nav-link" href="{{ locale_route('work.index',) }}">{{__('header.Our work')}}</a>
                         </li>
                         <li class="nav-item flex-grow-1 text-center">
                             <a class="nav-link" href="{{ locale_route('contact.index',) }}">{{__('header.Contact')}}</a>

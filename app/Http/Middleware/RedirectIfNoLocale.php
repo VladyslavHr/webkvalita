@@ -17,13 +17,14 @@ class RedirectIfNoLocale
     {
          // Установите вашу дефолтную локаль здесь
          $defaultLocale = 'sk';
-
+        // dd('No if');
          // Проверяем, содержит ли URL локаль
-         if (!in_array($request->segment(1), ['en', 'sk'])) {
-             // Перенаправляем на URL с дефолтной локалью
-             return redirect('/' . $defaultLocale);
+        //  if (!in_array($request->segment(1), ['en', 'sk'])) {
+        //      // Перенаправляем на URL с дефолтной локалью
 
-         }
+        //      return redirect('/' . $defaultLocale);
+
+        //  }
 
         return $next($request);
     }

@@ -54,13 +54,24 @@ class SetLocale
         $locale = $request->segment(1);
         $supportedLocales = ['en', 'sk'];
         $defaultLocale = 'sk';
+        // dd('no IF');
+
 
         // Проверяем, есть ли локаль в URL и поддерживается ли она
         if (!in_array($locale, $supportedLocales)) {
+            if (strlen($locale) == 2) {
+                $path = str_replace($locale, $defaultLocale, $request->path());
+                return redirect($path);
+            }
+
+
             // Перенаправляем на URL с дефолтной локалью
             // Учитываем, что нам нужно исключить неподдерживаемую локаль из пути
             $pathWithoutLocale = substr($request->path(), strlen($locale));
-            return redirect($defaultLocale . '/' . ltrim($pathWithoutLocale, '/'));
+            // dump(substr($request->path(), strlen($locale)));
+            // dd($defaultLocale . '/' . ltrim($pathWithoutLocale, '/'));
+
+            return redirect($defaultLocale . '/' . ltrim($request->path()));
         }
 
         // Если локаль поддерживается, устанавливаем ее

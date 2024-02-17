@@ -22,6 +22,11 @@ Route::get('lang/{locale}', function ($locale) {
     return back();
 });
 
+Route::get('/', function (){
+    return 'Hello';
+});
+
+
 Route::group(['prefix' => '{locale}'], function() {
     Auth::routes();
 
@@ -37,8 +42,16 @@ Route::group(['prefix' => '{locale}'], function() {
     // Firm
     Route::get('/oprava-pocitacov-kosice', [App\Http\Controllers\CompRepairController::class, 'index'])->name('compRepair.index');
 
+    // Tips&Tricks
+    Route::get('/tipy-a-tricky', [App\Http\Controllers\TrickController::class, 'index'])->name('tricks.index');
+
+    // Work
+    Route::get('/priebeh-opravy', [App\Http\Controllers\WorkController::class, 'index'])->name('work.index');
+
     // Contact
     Route::get('/kontakt', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
+    Route::get('/objednavka-servisu', [App\Http\Controllers\ContactController::class, 'service'])->name('contact.service');
+
 
     // Группа маршрутов для администратора
     Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
@@ -47,5 +60,3 @@ Route::group(['prefix' => '{locale}'], function() {
     });
 
 });
-
-
