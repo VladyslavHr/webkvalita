@@ -35,6 +35,7 @@
         <div class="col-md-6 py-5">
             <h3 class="text-center">Napíšte nám</h3>
             <form action="" class="py-4">
+                <input type="hidden" value="contact" name="contact">
                 <label for="name_contact" class="py-2">Meno</label>
                 <input type="text" class="form-control" name="name_contact" id="name_contact" placeholder="Meno">
                 <label for="email_contact" class="py-2">E-mail</label>

@@ -86,7 +86,7 @@
             <div class="col-md-6">
                 <div class="d-flex justify-content-between pb-3">
                     <h3>Naše referencie</h3>
-                    <a href="#" class="btn btn-primary">Napíšte nám referenciu</a>
+                    <a href="{{ locale_route('contact.index') }}" class="btn btn-primary">Napíšte nám referenciu</a>
                 </div>
                 <div class="owl-firm owl-carousel owl-theme">
                     <div class="item">

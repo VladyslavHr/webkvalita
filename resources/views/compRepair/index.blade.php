@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h2 class="text-center pt-4">Oprava počítačov Košice, Servis počítačov Košice</h2>
+    <h2 class="text-center py-4">Oprava počítačov Košice, Servis počítačov Košice</h2>
 
     @include('blocks/main-icon')
 
@@ -66,7 +66,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="#" class="btn btn-primary">Pozrite si priebeh opravy</a>
+            <a href="{{ locale_route('work.index') }}" class="btn btn-primary">Pozrite si priebeh opravy</a>
             <div class="notes-services-list py-5">
                 <h3 class="py-3 text-center" >Najčastejšie poruchy notebookov, ktoré opravujeme</h3>
                 <ul>
@@ -150,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn btn-primary">Pozrite si naše referencie</a>
+            <a href="{{ locale_route('firm.index') }}" class="btn btn-primary">Pozrite si naše referencie</a>
             <h5 class="text-center py-3">Objednajte si servis na čisle 0911 992 754 , cez internet alebo nás navštívte na našej prevádzke Košice - Sídlisko KVP</h5>
             <div class="row py-3">
                 <div class="col-lg-6">

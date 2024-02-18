@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <a href="#" class="btn btn-primary">Viac fotiek z nášho servisu nájdete na našom instagrame</a>
+        <a href="https://www.instagram.com/webkvalita/" target="_blank" class="btn btn-primary">Viac fotiek z nášho servisu nájdete na našom instagrame</a>
 
     </div>
 

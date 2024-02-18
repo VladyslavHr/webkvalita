@@ -3,6 +3,60 @@
     width: 100%;
 }
 
+.btn-primary{
+    border-radius: 0!important;
+    background-color: #03a9f4!important;
+    color: #fff!important;
+    border-color: #03a9f4!important;
+}
+
+.btn-primary:hover{
+    filter: saturate(0.5)!important;
+    transition: 0.3s!important;
+}
+
+.links-styl{
+    color: #03a9f4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.links-styl:hover{
+    filter: saturate(0.5);
+    transition: 0.3s;
+}
+
+/* Head */
+.show{
+    color: #fff!important;
+}
+
+.active-header-link{
+    position: relative;
+}
+
+.active-line{
+    display: none;
+    position: absolute;
+    border-bottom: 4px solid #03a9f4;
+    width: 100%;
+    left: 0;
+    bottom: -8px;
+}
+
+.header-drop-menu-wrap{
+    padding: 0;
+}
+
+.header-drop-li-active a:hover{
+    background-color: #03a9f4;
+    color: #fff;
+}
+
+.header-drop-li-active a.active{
+    background-color: #03a9f4!important;
+}
+
 .border-top-head{
     border-bottom: 1px solid;
 }
@@ -16,7 +70,7 @@
 }
 
 .header-menu .nav-link.active{
-    color: antiquewhite;
+    color: #03a9f4;
 }
 
 .info-mid-header-call,
@@ -227,7 +281,7 @@
     top: 50px;
     left: 0;
     width: 2.5ch;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid #03a9f4;
 }
 
 .home-about-text{
@@ -794,6 +848,14 @@
     width: 100%; /* Заставляет изображение заполнять весь блок */
     height: auto; /* Сохраняет пропорции изображения */
 }
+
+
+/* Contact Service */
+
+.contact-service-ul{
+    list-style: decimal;
+}
+
 @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -900,7 +962,7 @@
     }
 
     .carousel-caption{
-        padding-bottom: 90px!important;
+        padding-bottom: 75px!important;
     }
 
     .carousel-caption h2{

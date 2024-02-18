@@ -36,10 +36,10 @@ Route::group(['prefix' => '{locale}'], function() {
     // Firm
     Route::get('/o-firme', [App\Http\Controllers\FirmController::class, 'index'])->name('firm.index');
 
-    // Firm
+    // Note repair
     Route::get('/oprava-notebookov-kosice', [App\Http\Controllers\NoteRepairController::class, 'index'])->name('noteRepair.index');
 
-    // Firm
+    // Comp repair
     Route::get('/oprava-pocitacov-kosice', [App\Http\Controllers\CompRepairController::class, 'index'])->name('compRepair.index');
 
     // Tips&Tricks

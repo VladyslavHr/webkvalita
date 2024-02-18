@@ -11,4 +11,11 @@ class ContactController extends Controller
         return view('contact.index');
 
     }
+
+    public function service(){
+
+        return view('contact.service');
+
+    }
+
 }
