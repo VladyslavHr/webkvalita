@@ -16,8 +16,10 @@
                         </a>
                     </div>
                     <div class="col-lg-2 language-switcher">
-                        <a class="links-styl" href="{{ str_replace('/' . app()->getLocale(), '/sk', url()->current()) }}" class="{{ app()->getLocale() == 'sk' ? 'active' : '' }}">SK</a> |
-                        <a class="links-styl" href="{{ str_replace('/' . app()->getLocale(), '/en', url()->current()) }}" class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">EN</a>
+                        {{-- <a class="links-styl" href="{{ str_replace('/' . app()->getLocale(), '/sk', url()->current()) }}" class="{{ app()->getLocale() == 'sk' ? 'active' : '' }}">SK</a> |
+                        <a class="links-styl" href="{{ str_replace('/' . app()->getLocale(), '/en', url()->current()) }}" class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">EN</a> --}}
+                        <a href="{{ route('change.language', ['locale' => 'en']) }}">English</a>
+                        <a href="{{ route('change.language', ['locale' => 'sk']) }}">Slovak</a>
                     </div>
                 </div>
             </div>
@@ -38,7 +40,7 @@
 <div class="container py-5 info-mid-header">
     <div class="row align-items-center">
         <div class="col-lg-3">
-            <a class="navbar-brand" href="{{ locale_route('home.index',) }}">
+            <a class="navbar-brand" href="{{ localized_route('home') }}">
                 <img src="{{ asset('logo/logo.png') }}" style="width: 100%" alt="">
             </a>
         </div>
@@ -74,7 +76,7 @@
             </div>
         </div>
         <div class="col-lg-2">
-            <a href="{{ locale_route('contact.service') }}" class="btn btn-primary float-end">{{__('header.Order servis!')}}</a>
+            <a href="{{ localized_route('contact.service') }}" class="btn btn-primary float-end">{{__('header.Order servis!')}}</a>
         </div>
     </div>
 </div>
@@ -87,7 +89,7 @@
                 </div>
               </nav> --}}
             <div class="container-fluid">
-                <a class="navbar-brand-small-creen" href="{{ locale_route('home.index',) }}">
+                <a class="navbar-brand-small-creen" href="{{ localized_route('home',) }}">
                     <img class="image" src="{{ asset('logo/logo.png') }}" alt="">
                 </a>
                 <button class="navbar-toggler button-colapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,21 +98,45 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav d-flex w-100" id="header_menu_main">
                         <li class="nav-item flex-grow-1 text-center active-header-link">
-                            <a class="nav-link" href="{{ locale_route('home.index',) }}">{{__('header.Current actions')}}</a>
+                            <a class="nav-link" href="{{ localized_route('home',) }}">{{__('header.Current actions')}}</a>
                             <span class="active-line"></span>
                         </li>
                         <li class="nav-item flex-grow-1 text-center active-header-link">
-                            <a class="nav-link" href="{{ locale_route('firm.index',) }}">{{__('header.About company')}}</a>
+                            <a class="nav-link" href="{{ localized_route('firm',) }}">{{__('header.About company')}}</a>
                             <span class="active-line"></span>
                         </li>
-                        <li class="nav-item dropdown flex-grow-1 text-center">
-                            <a class="nav-link dropdown-toggle {{ url()->current() == locale_route('noteRepair.index') ? 'active' : '' }}"
-                            href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{-- <li class="nav-item dropdown flex-grow-1 text-center">
+                            <a class="nav-link dropdown-toggle {{ url()->current() == localized_route('noteRepair') ? 'active' : '' }}"
+                            href="{{ localized_route('noteRepair') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               {{ __('header.Laptop repair') }}
                             </a>
                             <span class="active-line"></span>
                             <ul class="dropdown-menu flex-grow-1 header-drop-menu-wrap" aria-labelledby="navbarDropdown">
-                              <li class="header-drop-li-active"><a class="dropdown-item" href="{{ locale_route('noteRepair.index',) }}">{{ __('header.Laptop repair') }}</a></li>
+                              <li class="header-drop-li-active"><a class="dropdown-item" href="{{ localized_route('noteRepair',) }}">{{ __('header.Laptop repair') }}</a></li>
+                              <li class="header-drop-li-active"><a class="dropdown-item" href="#">Another action</a></li>
+                            </ul>
+                        </li> --}}
+                        {{-- <li class="nav-item dropdown flex-grow-1 text-center">
+                            <a class="nav-link dropdown-toggle {{ url()->current() == localized_route('noteRepair') ? 'active' : '' }}"
+                               href="#" data-href="{{ localized_route('noteRepair') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              {{ __('header.Laptop repair') }}
+                            </a>
+                            <span class="active-line"></span>
+                            <ul class="dropdown-menu flex-grow-1 header-drop-menu-wrap" aria-labelledby="navbarDropdown">
+                              <li class="header-drop-li-active"><a class="dropdown-item" href="{{ localized_route('noteRepair') }}">{{ __('header.Laptop repair') }}</a></li>
+                              <li class="header-drop-li-active"><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> --}}
+                        <li class="nav-item dropdown flex-grow-1 text-center">
+                            <a class="nav-link dropdown-toggle {{ url()->current() == localized_route('noteRepair') ? 'active' : '' }}"
+                               href="#" data-href="{{ localized_route('noteRepair') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              {{ __('header.Laptop repair') }}
+                            </a>
+                            <span class="active-line"></span>
+                            <ul class="dropdown-menu flex-grow-1 header-drop-menu-wrap" aria-labelledby="navbarDropdown">
+                              <li class="header-drop-li-active"><a class="dropdown-item" href="{{ localized_route('noteRepair') }}">{{ __('header.Laptop repair') }}</a></li>
                               <li class="header-drop-li-active"><a class="dropdown-item" href="#">Another action</a></li>
                               {{-- <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
@@ -120,19 +146,19 @@
                             <a class="nav-link" href="#">{{__('header.Laptop repair')}}</a>
                         </li> --}}
                         <li class="nav-item flex-grow-1 text-center active-header-link">
-                            <a class="nav-link" href="{{ locale_route('compRepair.index',) }}">{{__('header.Computer repair')}}</a>
+                            <a class="nav-link" href="{{ localized_route('compRepair',) }}">{{__('header.Computer repair')}}</a>
                             <span class="active-line"></span>
                         </li>
                         <li class="nav-item flex-grow-1 text-center active-header-link">
-                            <a class="nav-link" href="{{ locale_route('tricks.index',) }}">{{__('header.Tips and tricks')}}</a>
+                            <a class="nav-link" href="{{ localized_route('tricks',) }}">{{__('header.Tips and tricks')}}</a>
                             <span class="active-line"></span>
                         </li>
                         <li class="nav-item flex-grow-1 text-center active-header-link">
-                            <a class="nav-link" href="{{ locale_route('work.index',) }}">{{__('header.Our work')}}</a>
+                            <a class="nav-link" href="{{ localized_route('work',) }}">{{__('header.Our work')}}</a>
                             <span class="active-line"></span>
                         </li>
                         <li class="nav-item flex-grow-1 text-center active-header-link">
-                            <a class="nav-link" href="{{ locale_route('contact.index',) }}">{{__('header.Contact')}}</a>
+                            <a class="nav-link" href="{{ localized_route('contact',) }}">{{__('header.Contact')}}</a>
                             <span class="active-line"></span>
                         </li>
                     </ul>
@@ -143,6 +169,55 @@
 </div>
 
   <script>
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var navbarDropdown = document.getElementById('navbarDropdown');
+
+    //     function adjustLinkBehavior() {
+    //         if (window.innerWidth >= 992) {
+    //             navbarDropdown.setAttribute('href', navbarDropdown.getAttribute('data-href'));
+    //             navbarDropdown.classList.remove('dropdown-toggle');
+    //             navbarDropdown.removeAttribute('data-bs-toggle');
+    //         } else {
+    //             navbarDropdown.setAttribute('href', '#');
+    //             navbarDropdown.classList.add('dropdown-toggle');
+    //             navbarDropdown.setAttribute('data-bs-toggle', 'dropdown');
+    //         }
+    //     }
+
+    //     adjustLinkBehavior();
+
+    //     window.addEventListener('resize', function() {
+    //         adjustLinkBehavior();
+    //     });
+    // });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbarDropdown = document.getElementById('navbarDropdown');
+
+        function adjustLinkBehavior() {
+            if (window.innerWidth >= 992) {
+                navbarDropdown.setAttribute('href', navbarDropdown.getAttribute('data-href'));
+                navbarDropdown.removeAttribute('data-bs-toggle');
+            } else {
+                navbarDropdown.setAttribute('href', '#');
+                navbarDropdown.setAttribute('data-bs-toggle', 'dropdown');
+            }
+        }
+
+        adjustLinkBehavior();
+
+        window.addEventListener('resize', function() {
+            adjustLinkBehavior();
+        });
+
+        navbarDropdown.addEventListener('click', function(event) {
+            if (window.innerWidth >= 992) {
+                window.location.href = navbarDropdown.getAttribute('data-href');
+            }
+        });
+    });
+
     document.querySelectorAll('.locale-link').forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault(); // Предотвращаем стандартное поведение ссылки

@@ -7,6 +7,34 @@
     <h2 class="text-center pt-3">{{ __('home.Why choose us') }}</h2>
     <h5 class="text-center pt-3 pb-5">{{ __('home.Quick! Cheap! Quality!') }}</h5>
     @include('blocks/main-icon')
+    {{-- <ul>
+        <li><a href="{{ localized_route('home') }}">{{ __('header.Home') }}</a></li>
+        <li><a href="{{ localized_route('firm') }}">{{ __('header.About Company') }}</a></li>
+        <li><a href="{{ localized_route('noteRepair') }}">{{ __('header.Laptop repair') }}</a></li>
+        <li><a href="{{ localized_route('compRepair') }}">{{ __('header.Computer repair') }}</a></li>
+        <li><a href="{{ localized_route('tricks') }}">{{ __('header.Tips and tricks') }}</a></li>
+        <li><a href="{{ localized_route('work') }}">{{ __('header.Our work') }}</a></li>
+        <li><a href="{{ localized_route('contact') }}">{{ __('header.Contact') }}</a></li>
+        <li><a href="{{ localized_route('service') }}">{{ __('header.Order service') }}</a></li>
+    </ul> --}}
+    {{-- <ul>
+        <li><a href="{{ route('home.sk') }}">{{ __('header.Home') }}</a></li>
+        <li><a href="{{ route('firm.sk') }}">{{ __('header.About Company') }}</a></li>
+        <li><a href="{{ route('noteRepair.sk') }}">{{ __('header.Laptop repair') }}</a></li>
+        <li><a href="{{ route('compRepair.sk') }}">{{ __('header.Computer repair') }}</a></li>
+        <li><a href="{{ route('tricks.sk') }}">{{ __('header.Tips and tricks') }}</a></li>
+        <li><a href="{{ route('work.sk') }}">{{ __('header.Our work') }}</a></li>
+        <li><a href="{{ route('contact.sk') }}">{{ __('header.Contact') }}</a></li>
+    </ul>
+    <ul>
+        <li><a href="{{ route('home.en') }}">{{ __('header.Home') }}</a></li>
+        <li><a href="{{ route('firm.en') }}">{{ __('header.About Company') }}</a></li>
+        <li><a href="{{ route('noteRepair.en') }}">{{ __('header.Laptop repair') }}</a></li>
+        <li><a href="{{ route('compRepair.en') }}">{{ __('header.Computer repair') }}</a></li>
+        <li><a href="{{ route('tricks.en') }}">{{ __('header.Tips and tricks') }}</a></li>
+        <li><a href="{{ route('work.en') }}">{{ __('header.Our work') }}</a></li>
+        <li><a href="{{ route('contact.en') }}">{{ __('header.Contact') }}</a></li>
+    </ul> --}}
 
     <div class="row py-5 align-items-center">
         <div class="col-lg-6 py-3">
@@ -16,7 +44,7 @@
             <div class="home-about-text">
                 Firma WEBKVALITA je lídrom v poskytovaní servisu notebookov a počítačov v Košiciach. Ako prvý v Košickom kraji sme začali poskytovať servis notebookov všetkých značiek.
             </div>
-            <a href="{{ locale_route('firm.index') }}" class="mt-5 btn btn-primary">Cklick</a>
+            <a href="{{ localized_route('firm') }}" class="mt-5 btn btn-primary">Cklick</a>
         </div>
         <div class="col-lg-6 py-3">
             <img class="image" src="{{ asset('home/aboutus.jpg') }}" alt="">

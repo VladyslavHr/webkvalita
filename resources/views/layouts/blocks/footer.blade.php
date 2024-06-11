@@ -2,9 +2,9 @@
     <div class="container">
         <div class="row py-5">
             <div class="col-md-3">
-                <a class="navbar-brand" href="{{ locale_route('home.index',) }}">
+                {{-- <a class="navbar-brand" href="{{ route('home') }}">
                     <img class="pb-3" src="{{ asset('logo/logo.png') }}" style="width: 100%" alt="">
-                </a>
+                </a> --}}
                 <p class="footer-firm-text">
                     Firma WEBKVALITA je lídrom v poskytovaní servisu notebookov a počítačov v Košiciach. Na trhu pôsobíme od roku 2007 a získali sme si už viac ako 30.000 zákazníkov a úspešne dokončili vyše 80.000 opráv.
                 </p>
@@ -83,13 +83,13 @@
                 <span class="footer-copirite">© Copyright 2024. WEBKVALITA, s.r.o.</span>
             </div>
             <div class="col-sm-6">
-                <div class="d-flex justify-content-end">
-                    <a href="{{ locale_route('home.index',) }}" class="">Aktuálne akcie</a>
+                {{-- <div class="d-flex justify-content-end">
+                    <a href="{{ route('home',) }}" class="">Aktuálne akcie</a>
                     <span class="me-3 ms-3">/</span>
-                    <a href="{{ locale_route('firm.index',) }}" class="">O firme</a>
+                    <a href="{{ route('firm',) }}" class="">O firme</a>
                     <span class="me-3 ms-3">/</span>
                     <a href="" class="">Kontakt</a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

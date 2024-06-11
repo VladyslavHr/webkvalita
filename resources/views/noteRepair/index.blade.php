@@ -64,7 +64,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="{{ locale_route('work.index') }}" class="btn btn-primary">Pozrite si priebeh opravy</a>
+            <a href="{{ localized_route('work') }}" class="btn btn-primary">Pozrite si priebeh opravy</a>
         </div>
         <div class="col-md-8 text-center">
             <h2 class="text-center mb-4">Prečo si vybrať náš servis?</h2>
@@ -148,7 +148,7 @@
                     </div>
                 </div>
             </div>
-            <a href="{{ locale_route('firm.index') }}" class="btn btn-primary">Pozrite si naše referencie</a>
+            <a href="{{ localized_route('firm') }}" class="btn btn-primary">Pozrite si naše referencie</a>
         </div>
     </div>
 

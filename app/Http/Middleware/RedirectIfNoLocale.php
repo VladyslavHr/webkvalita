@@ -16,7 +16,7 @@ class RedirectIfNoLocale
     public function handle(Request $request, Closure $next): Response
     {
          // Установите вашу дефолтную локаль здесь
-         $defaultLocale = 'sk';
+        //  $defaultLocale = 'sk';
         // dd('No if');
          // Проверяем, содержит ли URL локаль
         //  if (!in_array($request->segment(1), ['en', 'sk'])) {
@@ -26,6 +26,6 @@ class RedirectIfNoLocale
 
         //  }
 
-        return $next($request);
+        // return $next($request);
     }
 }
