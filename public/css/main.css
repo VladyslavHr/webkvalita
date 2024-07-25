@@ -1,9 +1,12 @@
 body{
     /* font-family: "Raleway",sans-serif!important; */
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important; */
-    font-family: "Open Sans"!important;
-    line-height: 1.75;
-    font-size: 18px;
+    /* font-family: "Open Sans"!important; */
+    font-family: "Montserrat"!important;
+    font-style: normal;
+    /* line-height: 60px; */
+    line-height: 2;
+    font-size: 13px;
 }
 
 #map {
@@ -11,16 +14,24 @@ body{
     width: 100%;
 }
 
+#header_menu_main{
+    line-height: 3;
+}
+
 .btn-primary{
+    font-size:14px;
     border-radius: 0!important;
     background-color: #03a9f4!important;
     color: #fff!important;
     border-color: #03a9f4!important;
+    font-weight: 600!important;
 }
 
 .btn-primary:hover{
-    filter: saturate(0.5)!important;
+    /* filter: saturate(0.5)!important; */
     transition: 0.3s!important;
+    background-color: #1d1d1d!important;
+    border-color: #1d1d1d!important;
 }
 
 .links-styl{
@@ -34,6 +45,9 @@ body{
     transition: 0.3s;
 }
 
+.svg-icon{
+    background-color: #007bff;
+}
 /* Head */
 .show{
     color: #fff!important;
@@ -54,6 +68,7 @@ body{
 
 .header-drop-menu-wrap{
     padding: 0;
+    border-radius: 0;
 }
 
 .header-drop-li-active a:hover{
@@ -84,6 +99,16 @@ body{
 .info-mid-header-call,
 .info-mid-header-open{
     font-size: 14px;
+    height: 53px;
+}
+
+.info-call,
+.info-openning{
+    height: 25px;
+}
+
+.openning-hours{
+    height: 62px;
 }
 
 .info-top-header{
@@ -109,6 +134,11 @@ body{
 
 .sub-color-text{
     color: #278db1;
+}
+
+.dropdown-item{
+    line-height: 2;
+    font-size: 12px;
 }
 
 /* Trick&Tips */
@@ -194,6 +224,10 @@ body{
     font-weight: 900;
 }
 
+.carousel-inner{
+    height: 300px;
+}
+
 .carousel-item {
     max-height: 500px;
     overflow: hidden;
@@ -255,6 +289,35 @@ body{
 
 
 /* Home */
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #0099ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -20px auto -20px;
+}
+
+.icon-circle:hover{
+    background: #2e3841;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.home-icon-wrap img {
+    max-width: 100%;
+}
+
+
+.home-svg-icon-wrap{
+    background: blue;
+    padding: 34px 34px;
+    border-radius: 50%;
+}
+
 .home-icon-wrap{
     background-color: #f4f4f4;
 }
@@ -273,10 +336,25 @@ body{
 
 .home-icon-text{
     padding-top: 40px;
+    line-height: 2;
+    min-height: 160px;
 }
 
 .home-underline{
     border-bottom: 1px solid;
+}
+
+.home-main-title{
+    position: relative;
+}
+
+.home-main-title:before{
+    content: '';
+    position: absolute;
+    top: 58px;
+    left: 48%;
+    width: 2.5ch;
+    border-bottom: 2px solid #03a9f4;
 }
 
 .home-about-title {
@@ -294,7 +372,7 @@ body{
 
 .home-about-text{
     padding: 30px 140px 30px 0;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .home-services-text{
@@ -403,6 +481,13 @@ body{
     margin: 0 0 30px 0;
 }
 
+.home-services-text,
+.home-service-text
+{
+    line-height: 2;
+}
+
+/* Footer */
 .background-footer{
     /* background-color: #009cff; */
     background-image: url('/home/bg-4.jpg');
@@ -882,8 +967,34 @@ body{
     animation-fill-mode: both;
   }
 
+@media (max-width: 1399px){
+    .home-icon-text{
+        min-height: 200px;
+    }
+
+    .home-icon-text h4{
+        min-height: 57px;
+    }
+}
+
+@media (max-width: 1199px){
+    .home-icon-text h4{
+
+    }
+}
 
 @media (max-width: 993px){
+
+    .home-about-text,
+    .home-services-text,
+    .home-service-text
+    {
+        padding: 0;
+        line-height: 2;
+    }
+
+
+
     .navbar-brand-small-creen{
         display: block;
         width: 50%;
@@ -940,6 +1051,15 @@ body{
         top: 0;
         transform: translate(-50%, 0);
       }
+
+
+    .home-icon-text{
+        min-height: 130px;
+    }
+
+    .home-icon-text h4{
+        min-height: 30px;
+    }
 }
 
 @media (max-width: 767px){
@@ -984,6 +1104,15 @@ body{
     .carousel-caption h4{
         font-size: 10px
     }
+
+    .carousel-control-prev,
+    .carousel-control-next{
+        height: 60%;
+    }
+
+    .home-icon-text{
+        min-height: 150px;
+    }
 }
 
 @media (max-width: 376px){
@@ -1020,6 +1149,15 @@ body{
 
     .carousel-caption h4{
         font-size: 10px
+    }
+
+    .home-main-title:before{
+        left: 45%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next{
+        height: 50%;
     }
 }
 
